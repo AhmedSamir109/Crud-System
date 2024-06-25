@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container mt-4">
+        <div class="w-75 m-auto py-3 px-5  border rounded-2 ">
+            <h1 class="mb-3">CRUD SYSTEM</h1>
+            <div class="mb-3  ">
+                <label for="productName" class="form-label">Product Name:</label>
+                <input
+                    
+                    type="text"
+                    id="productName"
+                    class="form-control"
+                    placeholder=""
+                    aria-describedby="helpId"
+                />
+                <p class="text-danger d-none " id="nameAlert"> please start with capital</p>
+
+            </div>
+            <div class="mb-3  ">
+                <label for="productPrice" class="form-label">Product Price:</label>
+                <input
+                    type="number"
+                    id="productPrice"
+                    class="form-control"
+                    placeholder=""
+                    aria-describedby="helpId"
+                />
+                <p class="text-danger d-none" id="priceAlert"> prices between 1000 to 100000</p>
+
+            </div>
+            <div class="mb-3  ">
+                <label for="productCat" class="form-label">Product Category:</label>
+                <input
+                    type="text"
+                    id="productCat"
+                    class="form-control"
+                    placeholder=""
+                    aria-describedby="helpId"
+                />
+                <p class="text-danger d-none " id="catsAlert"> allowed Cats is mobile , laptop , tv </p>
+
+            </div>
+            <div class="mb-3  ">
+                <label for="productDesc" class="form-label">Product Description:</label>
+                <textarea id="productDesc" class="form-control" ></textarea>
+                <p class="text-danger d-none " id="DescAlert"> Min char is 1 and max is 250 </p>
+
+            </div>
+
+            <button class="btn btn-primary d-block " onclick="AddProduct()" id="AddBtn">Add Product</button>
+            <button class="btn btn-warning d-none " onclick="updateProduct()" id="updateBtn">Update</button>
+        </div>
+
+
+        <div class="w-50 m-auto px-sm-5 ">
+            <input type="text" class="form-control my-4 rounded-5 py-2" placeholder="  Search .." onkeyup="SearchProduct(this.value)" >
+        </div>
+
+       <div class="px-sm-5 py-3 ">
+         <table class="table w-75 m-auto px-5  text-center">
+             <thead>
+                 <th>index</th>
+                 <th>Name</th>
+                 <th>Price</th>
+                 <th>Category</th>
+                 <th>Description</th>
+                 <th>Update</th>
+                 <th>Delete</th>
+             </thead>
+             <tbody id="body">
+                 
+             </tbody>
+         </table>
+       </div>
+
+    </div>
+
+   
+    
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
