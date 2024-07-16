@@ -1,0 +1,18 @@
+.width{
+    width: 70%;
+}
+
+.search-field{
+    width: 50%;
+}
+
+@media screen and (max-width:800px) {
+    .width{
+        width: 96%;
+    }
+
+    .search-field{
+        width: 90% ;
+    }
+}
+
